@@ -6,7 +6,7 @@
 /*   By: jsauvain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:37:50 by jsauvain          #+#    #+#             */
-/*   Updated: 2022/05/09 17:22:54 by jsauvain         ###   ########.fr       */
+/*   Updated: 2022/07/14 12:16:58 by jsauvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,3 @@ int	ft_printf(const char *format, ...)
 	va_end(arg);
 	return (i);
 }
-/*
-int main(void)
-{
-	int	b,c = 0;
-	char	*str = "presente";
-	int		a = 24;
-	void	*adresse = "l";
-
-	b = ft_printf("Je me %s, j'ai %d ans. Mon adresse est %p\n", str, a, adresse);
-	c = printf("Je me %s, j'ai %d ans. Mon adresse est %p\n", str, a, adresse);
-	printf("b = %d\nc = %d\n", b, c);
-}*/

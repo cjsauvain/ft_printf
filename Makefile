@@ -3,9 +3,9 @@ SRCS = ft_printf.c ft_putnbr.c low_hexa.c up_hexa.c put_hexa_ptr.c to_find.c \
 
 GCC = gcc
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g3
 
-OBJS = ${SRCS:.c=.o}
+OBJS = $(SRCS:.c=.o)
 
 NAME = libftprintf.a
 
@@ -16,16 +16,17 @@ AR = ar rcs
 all: $(NAME)
 
 clean:
-		${RM} ${OBJS} ${BONUS}
+		${RM} $(OBJS) ${BONUS}
 
 .c.o:
 		${GCC} ${FLAGS} -c $< -o ${<:.c=.o}
 
 fclean: clean
-		${RM} $(NAME)
+		${RM} $(NAME) printf
 
 $(NAME): ${OBJS}
 		${AR} $(NAME) ${OBJS}
+		$(GCC) $(FLAGS) -o printf $(OBJS) -L. -lftprintf
 
 re: fclean all
 
