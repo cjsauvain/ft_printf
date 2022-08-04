@@ -26,7 +26,7 @@ int	to_find(const char *format, char c, va_list arg)
 			i += ft_formatting(format, arg);
 			format ++;
 		}
-		if (*format)
+		else
 		{
 			format++;
 			i += ft_putchar(*format);
