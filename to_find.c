@@ -24,12 +24,12 @@ int	to_find(const char *format, char c, va_list arg)
 		if (*format == c)
 		{
 			i += ft_formatting(format, arg);
-			format ++;
+			format += 2;
 		}
 		else
 		{
-			format++;
 			i += ft_putchar(*format);
+			format++;
 		}
 	}
 	return (i);
